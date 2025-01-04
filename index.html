@@ -7,7 +7,7 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Times New Roman', Times, serif; /* Fonte alterada para Times New Roman */
             background-color: #001F3F; /* Fundo azul escuro */
             color: #FFD700; /* Letras douradas */
         }
@@ -65,10 +65,55 @@
             background-color: #001F3F;
             color: #FFD700;
         }
+
+        form {
+            margin-top: 20px;
+            background-color: #003366;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            color: #FFD700;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #FFD700;
+            border-radius: 5px;
+            background-color: #002244;
+            color: #FFD700;
+        }
+
+        form button {
+            background-color: #FFD700;
+            color: #001F3F;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #FFC400;
+        }
+
+        .logo {
+            display: block;
+            margin: 20px auto;
+            max-width: 150px;
+        }
     </style>
 </head>
 <body>
     <header>
+        <img src="logo.png" alt="Logo BV Advocacia e RV Recuperação" class="logo"> <!-- Inclusão da logo -->
         <h1>BV Advocacia e RV Recuperação de Crédito</h1>
     </header>
 
@@ -103,9 +148,22 @@
 
     <section id="contato">
         <h2>Contato</h2>
-        <p>Entre em contato conosco para mais informações:</p>
-        <p>Email: contato@bvadvocaciaerv.com</p>
-        <p>Telefone: (24) 988667621</p>
+        <p>Entre em contato conosco para mais informações e tirar suas duvidas de forma gratuita:</p>
+        <p>Email: velosoraphael9@gmail.com</p>
+        <p>Telefone/Whats app: (24) 988667621</p>
+
+        <form action="https://formsubmit.co/velosoraphael9@gmail.com" method="POST"> <!-- Formulário que envia para o Gmail -->
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
     </section>
 
     <footer>
