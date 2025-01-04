@@ -80,7 +80,7 @@
             margin-bottom: 10px;
         }
 
-        form input, form textarea {
+        form input {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
@@ -147,22 +147,20 @@
     </section>
 
     <section id="contato">
-        <h2>Contato</h2>
-        <p>Entre em contato conosco para mais informações:</p>
-        <p>Email: <a href="mailto:velosoraphael9@gmail.com">velosoraphael9@gmail.com</a></p>
-        <p>Telefone/WhatsApp: <a href="tel:+5524988667621">(24) 98866-7621</a></p>
+        <h2>Cadastro</h2>
+        <p>Cadastre-se para receber informações sobre nossos serviços:</p>
 
-        <form action="https://formsubmit.co/velosoraphael9@gmail.com" method="POST"> <!-- Formulário que envia para o Gmail -->
+        <form action="/cadastrar" method="POST"> <!-- Preparado para integração com o backend -->
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="name" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="phone" required>
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="message" rows="5" required></textarea>
-
-            <button type="submit">Enviar</button>
+            <button type="submit">Cadastrar</button>
         </form>
     </section>
 
